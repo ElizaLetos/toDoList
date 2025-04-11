@@ -1,2 +1,4 @@
 # toDoList
-A spring boot toDo list app
+A spring boot to do list app
+
+Add password of database in application.properties
