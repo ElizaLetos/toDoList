@@ -11,14 +11,16 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "point")
 @Entity
+@Table(name = "point")
 public class Point {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String description;
+
+    private boolean checked = false;
 
     @ManyToOne
     @JoinColumn(name = "list_id")

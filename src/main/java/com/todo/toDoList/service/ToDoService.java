@@ -48,4 +48,11 @@ public class ToDoService {
         ToDoList list = listRepository.findById(listId).orElseThrow(() -> new RuntimeException("List not found"));
         return list.getPoints();
     }
+
+    public Point markPointAsChecked(Long pointId) {
+        Point point = pointRepository.findById(pointId)
+                .orElseThrow(() -> new RuntimeException("Point not found"));
+        point.setChecked(true);
+        return pointRepository.save(point);
+    }
 }

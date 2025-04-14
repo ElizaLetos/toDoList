@@ -45,4 +45,9 @@ public class ToDoController {
     public List<Point> getAllPoints(@PathVariable Long listId) {
         return toDoService.getAllPoints(listId);
     }
+
+    @PutMapping("/points/{pointId}/check")
+    public Point markPointAsChecked(@PathVariable Long pointId) {
+        return toDoService.markPointAsChecked(pointId);
+    }
 }

@@ -23,6 +23,8 @@ CREATE TABLE IF NOT EXISTS point (
     ON DELETE CASCADE
     );
 
+ALTER TABLE point ADD COLUMN checked BOOLEAN DEFAULT false;
+
 INSERT INTO to_do_list (name)
 SELECT 'Groceries'
     WHERE NOT EXISTS (
