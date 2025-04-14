@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "98a0a7dc-32d4-4e4b-9e04-5f96f14842e2",
+		"_postman_id": "00e227d8-1319-48de-8fa5-e72e9709fea6",
 		"name": "todo_service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37822230"
+		"_exporter_id": "15785802"
 	},
 	"item": [
 		{
@@ -24,6 +24,29 @@
 						"lists",
 						"1",
 						"points"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check point",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/api/todo/points/2/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"todo",
+						"points",
+						"2",
+						"check"
 					]
 				}
 			},

@@ -19,7 +19,7 @@ public class Point {
     private Long id;
 
     private String description;
-
+    
     private boolean checked = false;
 
     @ManyToOne

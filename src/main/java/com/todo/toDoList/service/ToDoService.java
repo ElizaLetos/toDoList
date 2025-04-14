@@ -52,7 +52,7 @@ public class ToDoService {
     public Point markPointAsChecked(Long pointId) {
         Point point = pointRepository.findById(pointId)
                 .orElseThrow(() -> new RuntimeException("Point not found"));
-        point.setChecked(true);
+        point.setChecked(!point.isChecked());
         return pointRepository.save(point);
     }
 }
